@@ -1,0 +1,33 @@
+<ElementCard@MDCard>:
+    image: ''
+    rate: ''
+    price: ''
+    orientation: 'vertical'
+    on_release: app.show_custom_bottom_sheet(root.image, root.price, root.rate)
+    size_hint_x: .5
+    elevation: 15
+    size_hint_y: None
+    md_bg_color: app.theme_cls.primary_color
+    height: dp(220)
+    padding: dp(25)
+    spacing: dp(15)
+    radius: [25, ]
+    MDBoxLayout:
+        height: dp(120)
+        size_hint_y: None
+        Image:
+            source: root.image
+    MDBoxLayout:
+        size_hint_y: None
+        height: dp(25)
+        MDIcon:
+            icon: 'star'
+            theme_text_color: 'Custom'
+            text_color: 1,1,0,1
+            halign: 'center'
+            size_hint_x: .25
+        MDLabel:
+            text: root.rate
+    MDLabel:
+        text: root.price
+        font_style: 'H5'

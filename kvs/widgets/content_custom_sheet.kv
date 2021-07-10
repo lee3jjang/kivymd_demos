@@ -1,0 +1,65 @@
+<ContentCustomSheet@MDBoxLayout>:
+    orientation: "vertical"
+    size_hint_y: None
+    height:dp(750)
+    image:''
+    rate:""
+    price:""
+    padding:dp(12)
+    spacing:dp(6)
+    RelativeLayout:
+        ElementCard:
+            pos_hint:{"x":.05,"y":.5}
+            image:root.image
+            rate:root.rate
+            price:root.price
+
+    MDBoxLayout:
+        spacing:dp(5)
+        Check:
+            selected_color:1,0,0,1
+            active:True
+            unselected_color:1,0,0,1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+        Check:
+            selected_color:0,0,1,1
+            unselected_color:0,0,1,1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+
+        Check:
+            selected_color:0,1,0,1
+            unselected_color:0,1,0,1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+        Check:
+            selected_color:1,1,0,1
+            unselected_color:1,1,0,1
+            pos_hint: {'center_x': .5, 'center_y': .5}
+    MDLabel:
+        text:"this the latest version of our Brand with modern design."
+        adaptive_height:True
+    MDBoxLayout:
+        adaptive_width:True
+        MDIconButton:
+            icon:'plus'
+            pos_hint:{"center_x":.5,"center_y":.5}
+        MDLabel:
+            text:"1"
+            halign:'center'
+            valign:'center'
+        MDIconButton:
+            icon:"minus"
+            pos_hint:{"center_x":.5,"center_y":.5}
+
+    MDBoxLayout:
+        spacing:dp(8)
+        MDRoundFlatIconButton:
+            icon:"cart"
+            text:"Add to cart"
+            size_hint_x:1
+        MDRoundFlatIconButton:
+            icon:"cards-heart"
+            text:"Add to Favorite"
+            size_hint_x:1
+    MDRaisedButton:
+        size_hint_x:1
+        text:"Buy now"
