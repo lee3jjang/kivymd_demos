@@ -27,5 +27,6 @@ class LoginPage(MDApp):
 
         return self.sm
 
+
 if __name__ == '__main__':
     LoginPage().run()
