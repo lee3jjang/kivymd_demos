@@ -1,0 +1,19 @@
+<MainScreen@MDScreen>:
+    MDLabel:
+        id: stopwatch
+        halign: 'center'
+        markup: True
+
+    MDRaisedButton:
+        text: 'START'
+        id: start_stop
+        pos_hint: {'center_x': .25, 'center_y': .05}
+        on_release:
+            app.start_stop()
+
+    MDRaisedButton:
+        text: 'RESET'
+        id: reset
+        pos_hint: {'center_x': .75, 'center_y': .05}
+        on_release:
+            app.reset()
