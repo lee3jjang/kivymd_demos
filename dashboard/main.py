@@ -15,10 +15,12 @@ Window.left, Window.top = 50, 50
 class MainApp(MDApp):
     
     def build(self):
+        
         self.theme_cls.theme_style = "Dark"
         self.theme_cls.primary_palette = "DeepPurple"
 
         return Factory.MainScreen()
+
 
 if __name__ == '__main__':
     MainApp().run()
