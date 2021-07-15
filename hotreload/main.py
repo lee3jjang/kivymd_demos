@@ -30,7 +30,7 @@ class Example(MDApp):
     def build(self):
         self.theme_cls.theme_style = "Dark"
         # return Builder.load_string(KV)
-        Builder.load_file('main.kv')
+        # Builder.load_file('main.kv')
         return Factory.MainScreen()
 
     def update_kv_file(self, text):
