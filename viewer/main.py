@@ -8,18 +8,11 @@ KV = '''
 
 Screen:
     BoxLayout:
-        BoxLayout:
-            orientation: "vertical"
+        CodeInput:
+            id: code
+            lexer: KivyLexer()
+            style_name: "native"
             size_hint_x: .7
-            CodeInput:
-                id: code
-                lexer: KivyLexer()
-                style_name: "native"
-                size_hint_y: 0.9
-            # Button:
-            #     text: "Reload"
-            #     on_release: app.update_kv_file(code.text)
-            #     size_hint_y: 0.1
 
         HotReloadViewer:
             size_hint_x: .3
@@ -37,7 +30,7 @@ class Example(MDApp):
         Window.bind(on_key_down=self._on_keyboard_down)
 
     def _on_keyboard_down(self, *args):
-        if args[3]=='s' and args[4][1]=='ctrl':
+        if args[3]=='s' and args[4][0]=='ctrl':
             self.update_kv_file(self.screen.ids.code.text)
     
     def build(self):
