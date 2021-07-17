@@ -1,0 +1,22 @@
+#:import toast kivymd.toast.toast
+#:import MDListBottomSheet kivymd.uix.bottomsheet.MDListBottomSheet
+
+MainScreen:
+
+<MainScreen>:
+	md_bg_color: (1, 1, 1, 1)
+
+	MDToolbar:
+		title: "Example BottomSheet"
+		left_action_items: [["menu", lambda x: root.callback(x)]]
+		pos_hint: {"top": 1}
+		elevation: 10
+		
+	MDRaisedButton:
+		text: "Open list bottom sheet"
+		on_release:
+			menu = MDListBottomSheet()
+			for i in range(10): menu.add_item(f"Standard Item ({i+1})", lambda x, y=i: print(y))
+			menu.open()
+		pos_hint: {"center_x": .5, "center_y": .5}
+		
