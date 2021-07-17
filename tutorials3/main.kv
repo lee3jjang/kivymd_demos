@@ -1,14 +1,21 @@
-MainScreen:
+MDBoxLayout:	
+	md_bg_color: (0.5, 0.25, 0.7, 1)
+	orientation: "vertical"
 
-<MainScreen>:
-	#md_bg_color: (1, 1, 1, 1)
+	MDBoxLayout:
+		md_bg_color: (0, 0.5, 1, 1)
+		size_hint_y: 0.85
 
-	MDFloatLayout:	
+	MDBoxLayout:
+		size_hint_y: 0.15
 
-		MDCheckbox:
-			size_hint: None, None
-			size: "48sp", "48sp"
-			pos_hint: {"center_x": .5, "center_y": .6}
-
-		MDSwitch:
-			pos_hint: {"center_x": .5, "center_y": .4}
+		
+		MDRaisedButton:
+			#size_hint_x: .7
+			size_hint_y: 1
+			pos_hint: {"center_x": .5, "center_y": .5}
+			text: "Button"
+			
+		MDFloatLayout:
+			#size_hint_x: .3
+			md_bg_color: (1, 0.7, 0.6, 1)
