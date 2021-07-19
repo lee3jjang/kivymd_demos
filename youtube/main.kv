@@ -1,0 +1,46 @@
+MainScreen:
+	MDFloatLayout:
+		md_bg_color: rgba("#ff5555")
+		MDLabel:
+			text: "youtube videos downloader".title()
+			size_hint: None, None
+			pos_hint: {"top": .94, "center_x": .5}
+			md_bg_color: rgba("#000000")
+			bold: True
+			font_size: "27sp"
+			size: 343, 30
+		TextInput:
+			id: txt_input
+			pos_hint: {"top": .8, "center_x": .5}
+			size_hint: .85, .06
+			background_color: 1, 1, 1, 1
+			color: 0, 0, 0, 1
+			bond: True
+			font_size: "20sp"
+			multiline: False
+		Button:
+			id: save_btn
+			text: "Download"
+			background_color: 0, 0, 0, 1
+			background_normal: ""
+			font_size: "18sp"
+			bold: True
+			color: 1, 1, 1, 1
+			pos_hint: {"top": .7, "center_x": .5}
+			size_hint: .3, .08
+			on_press:
+            	root.download_video(txt_input.text)
+		AsyncImage:
+			id: thumbnail
+			pos_hint: {"top": .4, "center_x": .5}
+			size_hint: .9, .2
+			source: ""
+		Label:
+			id: title
+			text: "video title".title()
+        	size_hint: None, None
+        	size: self.texture_size
+        	pos_hint: {"top":0.2, "center_x":0.5}
+        	font_size: "20"
+        	bold: True
+        	color: 0, 0, 0, 1
