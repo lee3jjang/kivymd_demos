@@ -1,7 +1,9 @@
 from kivystudio import KivyStudio
 from kivymd.uix.screen import MDScreen
 from pathlib import Path
+from kivymd.app import MDApp
 from kivy.clock import Clock
+from kivy.lang import Builder
 import os
 import pytube
 from kivymd.toast import toast
@@ -30,7 +32,13 @@ class MainScreen(MDScreen):
         toast("Video is downloading...")
 
 
+class MyApp(MDApp):
+
+    def build(self):
+        Builder.load_file('main.kv')
+        return MainScreen()
 
 if __name__ == '__main__':
-    studio = KivyStudio(str(Path(os.path.dirname(__file__)) / 'main.kv'))
-    studio.run()
+    MyApp().run()
+    # studio = KivyStudio(str(Path(os.path.dirname(__file__)) / 'main.kv'))
+    # studio.run()
