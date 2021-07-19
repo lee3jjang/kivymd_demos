@@ -1,0 +1,42 @@
+MainScreen:
+
+<MainScreen>:
+	md_bg_color: 1, 1, 1, 1
+
+	MDBoxLayout:
+		orientation: "vertical"
+		spacing: "10dp"
+
+		MDToolbar:
+			elevation: 10
+			title: "MDCardSwipe"
+
+		ScrollView:
+			scroll_timeout: 100
+
+			MDList:
+				id: md_list
+				padding: 0
+
+				SwipeToDeleteItem:
+				SwipeToDeleteItem:
+				SwipeToDeleteItem:
+				SwipeToDeleteItem:
+				SwipeToDeleteItem:
+				SwipeToDeleteItem:
+				SwipeToDeleteItem:
+
+				
+<SwipeToDeleteItem@MDCardSwipe>:
+	size_hint_y: None
+	height: content.height
+	text: "One-line Item"
+
+	MDCardSwipeLayerBox:
+
+	MDCardSwipeFrontBox:
+		OneLineListItem:
+			id: content
+			text: root.text
+			_no_ripple_effect: True
+
